@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Search authors</title>
+</head>
+<body>
+	{% if errors %}
+		<ul>
+			{% for error in errors %}
+			<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+<form action="" method="get">
+	<input type="text" name="q">
+	<input type="submit" value="Search">
+</form>
+</body>
+<li>{{ author_list }} </li>
+{% if books_list %}
+    <ul>
+<p> author name:    books' title  </p>
+    {% for book in books_list %}
+        <li> {{ book.AuthorID }}  : {{ book.Title }}  <a href="../../book_details/?id={{book.id}}">details</a> <a href="../../book_delete/?id={{book.id}}"> delete</a>  <a href="../../book_update/?id={{book.id}}"> update</a>
+
+</li>
+
+	  	
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No books are available.</p>
+{% endif %}
+</html>

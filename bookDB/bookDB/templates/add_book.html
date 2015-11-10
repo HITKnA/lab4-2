@@ -1,0 +1,11 @@
+{% if is_success %}
+	<p>You have added a book!</p>
+{% endif%}
+<form action="" method="get">
+        <table>
+            {{ book_form.as_table }}
+        </table>
+        <input type="submit" value="Submit">
+</form>
+<a href="../../">Go back to index</a>
+

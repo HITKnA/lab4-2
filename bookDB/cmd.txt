@@ -1,0 +1,299 @@
+. This will no longer be supported in Django 1.9.
+  class Book(models.Model):
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 27, 2015 - 22:43:47
+Django version 1.8.5, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[27/Oct/2015 22:43:58] "GET /admin HTTP/1.1" 500 112024
+[27/Oct/2015 22:44:01] "GET /admin HTTP/1.1" 500 112024
+[27/Oct/2015 22:44:17] "GET /admin HTTP/1.1" 500 112024
+[27/Oct/2015 22:44:23] "GET / HTTP/1.1" 500 95593
+[27/Oct/2015 22:44:43] "GET /admin HTTP/1.1" 500 111873
+^C
+c:\Python27\mysite>cd
+c:\Python27\mysite
+
+c:\Python27\mysite>cd python27
+系统找不到指定的路径。
+
+c:\Python27\mysite>
+c:\Python27\mysite>cd c:]python27
+系统找不到指定的路径。
+
+c:\Python27\mysite>cd c:\python27
+
+c:\Python27>django-admin.py startproject bookDB
+
+c:\Python27>cd bookdb
+
+c:\Python27\bookDB>python manage.py startapp
+usage: manage.py startapp [-h] [--version] [-v {0,1,2,3}]
+                          [--settings SETTINGS] [--pythonpath PYTHONPATH]
+                          [--traceback] [--no-color] [--template TEMPLATE]
+                          [--extension EXTENSIONS] [--name FILES]
+                          name [directory]
+manage.py startapp: error: You must provide an application name.
+
+c:\Python27\bookDB>python manage.py startapp BookDB
+CommandError: 'c:\Python27\bookDB\BookDB' already exists
+
+c:\Python27\bookDB>python manage.py startapp BooksDB
+
+c:\Python27\bookDB>python manage.py syncdb
+C:\Python27\lib\site-packages\django\core\management\commands\syncdb.py:24: Remo
+vedInDjango19Warning: The syncdb command will be removed in Django 1.9
+  warnings.warn("The syncdb command will be removed in Django 1.9", RemovedInDja
+ngo19Warning)
+
+Operations to perform:
+  Synchronize unmigrated apps: staticfiles, messages
+  Apply all migrations: admin, contenttypes, auth, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+  Installing custom SQL...
+Running migrations:
+  Rendering model states... DONE
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying sessions.0001_initial... OK
+
+You have installed Django's auth system, and don't have any superusers defined.
+Would you like to create one now? (yes/no): ^C
+c:\Python27\bookDB>python manage.py syncdb
+C:\Python27\lib\site-packages\django\core\management\commands\syncdb.py:24: Remo
+vedInDjango19Warning: The syncdb command will be removed in Django 1.9
+  warnings.warn("The syncdb command will be removed in Django 1.9", RemovedInDja
+ngo19Warning)
+
+Operations to perform:
+  Synchronize unmigrated apps: staticfiles, messages
+  Apply all migrations: admin, contenttypes, auth, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+  Installing custom SQL...
+Running migrations:
+  Rendering model states... DONE
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying sessions.0001_initial... OK
+
+You have installed Django's auth system, and don't have any superusers defined.
+Would you like to create one now? (yes/no): yes
+Username (leave blank to use 'kevinyyyx'): kevin
+Email address: 594912907@qq.com
+Password:
+Password (again):
+Superuser created successfully.
+
+c:\Python27\bookDB>python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 27, 2015 - 23:05:48
+Django version 1.8.5, using settings 'bookDB.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[27/Oct/2015 23:05:58] "GET /admin HTTP/1.1" 301 0
+[27/Oct/2015 23:05:58] "GET /admin/ HTTP/1.1" 302 0
+[27/Oct/2015 23:05:58] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1915
+[27/Oct/2015 23:06:08] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[27/Oct/2015 23:06:09] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:06:09] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[27/Oct/2015 23:06:09] "GET /static/admin/img/default-bg.gif HTTP/1.1" 304 0
+[27/Oct/2015 23:06:09] "GET /static/admin/img/icon_addlink.gif HTTP/1.1" 304 0
+[27/Oct/2015 23:06:09] "GET /static/admin/img/icon_changelink.gif HTTP/1.1" 304
+0
+[27/Oct/2015 23:06:21] "GET /admin/auth/group/ HTTP/1.1" 200 3592
+[27/Oct/2015 23:06:21] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[27/Oct/2015 23:06:24] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:10:58] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:10:58] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[27/Oct/2015 23:10:58] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+^C
+c:\Python27\bookDB>python manage.py syncdb
+C:\Python27\lib\site-packages\django\core\management\commands\syncdb.py:24: Remo
+vedInDjango19Warning: The syncdb command will be removed in Django 1.9
+  warnings.warn("The syncdb command will be removed in Django 1.9", RemovedInDja
+ngo19Warning)
+
+Operations to perform:
+  Synchronize unmigrated apps: staticfiles, messages
+  Apply all migrations: admin, contenttypes, auth, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+  Installing custom SQL...
+Running migrations:
+  No migrations to apply.
+
+c:\Python27\bookDB>python manage.py migrate
+Operations to perform:
+  Synchronize unmigrated apps: staticfiles, messages, bookDB
+  Apply all migrations: admin, contenttypes, auth, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+  Installing custom SQL...
+Running migrations:
+  No migrations to apply.
+
+c:\Python27\bookDB>python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 27, 2015 - 23:14:42
+Django version 1.8.5, using settings 'bookDB.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[27/Oct/2015 23:14:48] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:14:50] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:14:50] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[27/Oct/2015 23:14:50] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[27/Oct/2015 23:16:45] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:21:10] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:21:10] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:10] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:11] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:21:11] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:11] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:12] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:21:12] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:12] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:12] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:21:12] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:12] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:12] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:21:12] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:12] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:12] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:21:12] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:12] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:13] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:21:13] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:13] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[27/Oct/2015 23:21:16] "GET / HTTP/1.1" 200 1767
+[27/Oct/2015 23:21:26] "GET /favicon.ico HTTP/1.1" 404 1936
+[27/Oct/2015 23:21:28] "GET /admin HTTP/1.1" 301 0
+[27/Oct/2015 23:21:28] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:22:45] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:22:45] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[27/Oct/2015 23:22:45] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 27, 2015 - 23:29:38
+Django version 1.8.5, using settings 'bookDB.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[27/Oct/2015 23:29:46] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:29:46] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[27/Oct/2015 23:29:46] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[27/Oct/2015 23:29:48] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:30:13] "GET /admin/auth/group/add/ HTTP/1.1" 200 6357
+[^C
+c:\Python27\bookDB>python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 27, 2015 - 23:34:43
+Django version 1.8.5, using settings 'bookDB.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[27/Oct/2015 23:34:48] "GET /admin/ HTTP/1.1" 200 3020
+[27/Oct/2015 23:34:51] "GET /admin/ HTTP/1.1" 200 3020
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line
+351, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line
+343, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line
+177, in fetch_command
+    commands = get_commands()
+  File "C:\Python27\lib\site-packages\django\utils\lru_cache.py", line 101, in w
+rapper
+    result = user_function(*args, **kwds)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line
+72, in get_commands
+    for app_config in reversed(list(apps.get_app_configs())):
+  File "C:\Python27\lib\site-packages\django\apps\registry.py", line 137, in get
+_app_configs
+    self.check_apps_ready()
+  File "C:\Python27\lib\site-packages\django\apps\registry.py", line 124, in che
+ck_apps_ready
+    raise AppRegistryNotReady("Apps aren't loaded yet.")
+django.core.exceptions.AppRegistryNotReady: Apps aren't loaded yet.
+
+c:\Python27\bookDB>python manage.py runserver
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line
+351, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line
+343, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line
+177, in fetch_command
+    commands = get_commands()
+  File "C:\Python27\lib\site-packages\django\utils\lru_cache.py", line 101, in w
+rapper
+    result = user_function(*args, **kwds)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line
+72, in get_commands
+    for app_config in reversed(list(apps.get_app_configs())):
+  File "C:\Python27\lib\site-packages\django\apps\registry.py", line 137, in get
+_app_configs
+    self.check_apps_ready()
+  File "C:\Python27\lib\site-packages\django\apps\registry.py", line 124, in che
+ck_apps_ready
+    raise AppRegistryNotReady("Apps aren't loaded yet.")
+django.core.exceptions.AppRegistryNotReady: Apps aren't loaded yet.
+
+c:\Python27\bookDB>python manage.py syncdb
+Traceback (most recent call last):
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line
+351, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line
+325, in execute
+    django.setup()
+  File "C:\Python27\lib\site-packages\django\__init__.py", line 18, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Python27\lib\site-packages\django\apps\registry.py", line 85, in popu
+late
+    app_config = AppConfig.create(entry)
+  File "C:\Python27\lib\site-packages\django\apps\config.py", line 86, in create
+
+    module = import_module(entry)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named BookDB
+
+c:\Python27\bookDB>admin.autodiscover()

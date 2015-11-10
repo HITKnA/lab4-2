@@ -1,0 +1,45 @@
+
+<html>
+<head>
+<title> Update book </title>
+</head>
+    <form action="/book_update/" method="get">
+
+<table>
+<tr>
+          <th>Title</th><th>Author</th><th>Publisher</th><th>PublishDate</th><th>Price</th>
+         </tr>
+            <tr>
+                <td>{{ book.Title }}</td>
+                <td>{{ book.AuthorID.Name }}<a href="../../add_author/?id={{book.id}}"> add a new author</a>
+</td>
+                <td>{{ book.Publisher }}</td>
+                <td>{{ book.PublishDate }}</td>
+                <td>{{ book.Price }}</td> 
+            </tr>
+	
+            <tr>
+                <td><input type="text" name="title"></td>
+                <td><input type="text" name="name"></td>
+                <td><input type="text" name="publisher"></td>
+                <td><input type="date" name="publishdate"></td>
+                <td><input type="text" name="price"></td>
+            </tr>
+<table>
+<tr>
+    
+                <th>
+                <form action="" method="get">
+		    <input type="hidden" name="id" value="{{ book.id }}">
+                <input type="submit" value="Update">
+                </from>
+                </th>
+            </tr>
+            </table>
+    </table>
+    </form>
+<p><a href="../../"> back to the index</a>
+<p><a href="../../book_details/?id={{book.id}}"> book details</a>
+
+</body>
+</html>

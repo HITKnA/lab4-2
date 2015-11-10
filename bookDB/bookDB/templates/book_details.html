@@ -1,0 +1,14 @@
+<head>
+<title> Book Details </title>
+</head>
+<p>Details:</p>
+<li>tittle: {{ book.Title }}</li>
+<li>author id: {{ book.AuthorID }}</li>
+<li>publisher: {{ book.Publisher }}</li>
+<li>publish date: {{ book.PublishDate }}</li>
+<li>isbn: {{ book.ISBN }}</li>
+<li>price: {{book.Price }}</li>
+<p><a href="../../book_delete/?id={{book.id}}"> delete</a></p>
+<p><a href="../../"> back to the index</a>
+<p><a href="../../book_update/?id={{book.id}}">update the book</a>
+

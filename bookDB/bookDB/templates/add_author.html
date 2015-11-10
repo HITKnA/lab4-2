@@ -1,0 +1,24 @@
+<html>
+<head>
+<title> Add author</title>
+</head>
+    <form action="/add_author/" method="get">
+
+
+
+<p>add a NEW Author</p>
+<p>Author ID (number only)<input type="text" name="AuthorID"></p>                    <p>Name                   <input type="text" name="Name"></p>
+<p>Age(number only)       <input type="text" name="Age"></p>
+<p>Country                <input type="text" name="Country"></p>
+                            
+
+                <th>
+                <form action="" method="get">
+                <input type="submit" value="Add">
+                </from>
+		{% if book %}
+			<a href="../../book_update/?id={{book.id}}">go back to update</a>
+		{% endif %}
+                </th>
+            </tr>
+            
